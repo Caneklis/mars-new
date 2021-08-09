@@ -1,0 +1,128 @@
+---
+title: О центре
+---
+{% extends "../templates/layouts/_layout-inner.html" %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="hero__wrapper">
+    <article class="hero__article" data-aos="zoom-in" data-aos-duration="1500">
+      <h2>{{ title }}</h2>
+      <p>Центр боевых искусств и спорта «МАРС» осуществляет педагогическуюи спортивную деятельность по версии <a
+          href="#">IFK</a> под организационным и методическим руководством Федерации Кёкусинкай России (ФКР) и
+        Московской Федерации Кёкусинкай (МФК).</p>
+    </article>
+  </div>
+</section>
+
+<section class="story">
+  <div class="story__wrapper">
+    <article class="story__article">
+      <div class="story__media">
+        <iframe src="https://www.youtube.com/embed/LKcKXyHCgs4" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="story__text" data-aos="zoom-in" data-aos-duration="1500">
+        <p>Стиль каратэ Кёкусинкай (Киокусинкай, Киокушинкай) был создан в 50-х годах прошлого века мастером <a
+            href="#">Масутацу Оямой</a> как альтернатива принципу «каратэ без контакта». Мощь и эффективность техники,
+          система подготовки Кёкусинкай возродила каратэ как воинское искусство и сделали его исключительно популярным
+          далеко за пределами Японии. Кёкусинкай является не просто спортом, но опираясь на заложенную в нем основателем
+          стиля систему воспитания воспитывает в человеке уважение к окружающим, достойное поведение в зале и за его
+          пределами, убеждения в том, что сила тела и духа приходит от постоянного преодоления своей слабости, вызова
+          своим пределам и упорного труда.</p>
+        <a href="#" class="learn-more">ИСТОРИЯ СТИЛЯ</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="coaches">
+  <div class="coaches__wrapper">
+    <h2 class="coaches__title">Тренеры-наставники <span>центра МАРС</span></h2>
+  </div>
+  <ul class="coaches__short-list">
+    {% for i in range(0, 6) -%}
+    <li class="coach  coach--white-bg  coach--no-padding" data-aos="fade-up">
+      <div class="coach__wrapper">
+        <div class="coach__info">
+          <div class="coach__photo">
+            <img src="img/coaches/coach-1.jpg" width="215" height="215" loading="lazy" alt="Фотография тренера">
+          </div>
+          <h3><span>Дубынин</span> Игорь Викторович</h3>
+          <p>сэнсей, IV дан <br>
+            опыт работы 42 года</p>
+        </div>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="structure">
+  <div class="structure__wrapper">
+    <h2 class="structure__title">Учебные группы <span>КЕКУСИНКАЙ</span></h2>
+
+    <ul class="structure__list">
+      <li class="structure__item" data-aos="flip-left" data-aos-duration="500">
+        <div class="structure__pic"><img src="img/groups/group-1.jpg" width="212" height="212"
+            alt="Фотография для превью"></div>
+        <h3>Группа №5 <br>
+          ОФП-каратэ</h3>
+
+        <p>Вторник <br>
+          17:00 – 18:00</p>
+
+        <p>Суббота<br>
+          10:00 – 11:00</p>
+
+        <a href="#" class="learn-more">ЗАПИСАТЬСЯ!</a>
+      </li>
+      <li class="structure__item" data-aos="flip-left" data-aos-duration="500">
+        <div class="structure__pic"><img src="img/groups/group-2.jpg" width="212" height="212"
+            alt="Фотография для превью"></div>
+        <h3>Группа №1 <br>
+          Начальное обучение</h3>
+
+        <p>Вторник <br>
+          17:00 – 18:00</p>
+
+        <p>Суббота<br>
+          10:00 – 11:00</p>
+
+        <a href="#" class="learn-more">ЗАПИСАТЬСЯ!</a>
+      </li>
+      <li class="structure__item" data-aos="flip-left" data-aos-duration="500">
+        <div class="structure__pic"><img src="img/groups/group-3.jpg" width="212" height="212"
+            alt="Фотография для превью"></div>
+        <h3>Группа №2 <br>
+          Базовое обучение</h3>
+
+        <p>Понедельник <br>
+          18:00 – 19:30</p>
+
+        <p>Среда<br>
+          18:00 – 19:30</p>
+
+        <a href="#" class="learn-more">ЗАПИСАТЬСЯ!</a>
+      </li>
+      <li class="structure__item" data-aos="flip-left" data-aos-duration="500">
+        <div class="structure__pic"><img src="img/groups/group-4.jpg" width="212" height="212"
+            alt="Фотография для превью"></div>
+        <h3>Группа №3 <br>
+          Цветные пояса</h3>
+
+        <p>Понедельник <br>
+          19:45 – 21:30</p>
+
+        <p>Четверг<br>
+          19:45 – 21:30</p>
+
+        <a href="#" class="learn-more">ЗАПИСАТЬСЯ!</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

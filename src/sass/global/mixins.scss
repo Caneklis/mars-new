@@ -1,0 +1,25 @@
+@mixin wrapper {
+  min-width: 320px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin title {
+  margin: 0;
+  font-family: $logo-font;
+  font-size: 30px;
+  line-height: 1.1;
+
+  span {
+    display: block;
+    color: $m-color;
+  }
+}

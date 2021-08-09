@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-500.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-500.woff" as="font" type="font/woff">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-300.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-300.woff" as="font" type="font/woff">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-300italic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-300italic.woff" as="font" type="font/woff">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-regular.woff" as="font" type="font/woff">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-700.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/montserrat-v15-latin_cyrillic-700.woff" as="font" type="font/woff">
+  <link rel="preload" href="/fonts/als_tongyin_bold-webfont.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/als_tongyin_bold-webfont.woff" as="font" type="font/woff">
+  <link rel="preload" href="/fonts/russoone-regular-webfont.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/fonts/russoone-regular-webfont.woff" as="font" type="font/woff">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="icon" href="/img/favicon/favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="/img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png"><!-- 180×180 -->
+  <link rel="manifest" href="/img/favicon/manifest.webmanifest">
+
+
+  <meta name="theme-color" content="#ffffff">
+  <!-- <base href="new"> -->
+</head>
+
+<body class="page__body">
+
+  {% include "../partials/_header.html" %}
+  <main class="page__content">
+    {% block content %} {% endblock %}
+  </main>
+
+  {% include "../partials/_footer.html" %}
+
+  <script src="/js/libs.min.js"></script>
+  <script src="/js/common.min.js"></script>
+</body>
+
+</html>

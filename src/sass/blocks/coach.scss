@@ -1,0 +1,406 @@
+.coach {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(191, 206, 219, 0.2) 100%
+  );
+
+  &--white-bg {
+    background: transparent;
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+}
+
+.coach__wrapper {
+  @include wrapper;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  @media (max-width: 1280px) {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &--no-grid {
+    display: block;
+  }
+}
+
+.coach__info {
+  width: 260px;
+  padding-top: 15px;
+  text-align: center;
+
+  @media (max-width: 1280px) {
+    grid-row: 1/3;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    color: $m-color;
+
+    span {
+      display: block;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.coach__photo {
+  width: 215px;
+  height: 215px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coach__text {
+  max-width: 485px;
+  margin-right: auto;
+  margin-left: 50px;
+  padding-right: 40px;
+  border-right: 1px solid #dadee3;
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  @media (max-width: 1280px) {
+    width: 100%;
+    max-width: unset;
+    margin-left: 0;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    border-right: none;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+  }
+}
+
+.coach__groups {
+  max-width: 485px;
+  padding-left: 50px;
+
+  @media (max-width: 1280px) {
+    width: 100%;
+    max-width: unset;
+    padding-left: 40px;
+    grid-column: 2/3;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+  }
+
+  &--full {
+    max-width: unset;
+    padding: 0;
+    grid-column: 1/3;
+  }
+
+  ul {
+    @include list-reset;
+  }
+
+  li {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: $s-font;
+
+    i {
+      color: $m-color;
+      font-style: normal;
+    }
+
+    a {
+      position: relative;
+      color: inherit;
+      text-decoration: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        display: block;
+        height: 2px;
+        background-color: $m-color;
+        transform: scaleX(0);
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 2;
+  }
+}
+
+.coach__page-article {
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  grid-auto-flow: column dense;
+  column-gap: 50px;
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}
+
+.coach__article-title,
+.coach__degree {
+  grid-column: 2/3;
+}
+
+.coach__article-title {
+  grid-row: 1/2;
+
+  margin: 0;
+  margin-bottom: 20px;
+  color: $m-color;
+  font-size: 30px;
+  font-family: "als_tongyinbold";
+}
+
+.coach__degree {
+  grid-row: 2/3;
+  margin-bottom: 20px;
+  p {
+    margin: 0;
+  }
+}
+
+.coach__col-left {
+  grid-row: 1/6;
+}
+
+.coach__full-text {
+  grid-row: 3/5;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.coach__photo-slider {
+  margin-bottom: 50px;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    display: block;
+    width: 20px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &::before {
+      content: url("../img/icons/structure-arrow.svg");
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  .slick-prev {
+    left: -20px;
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slick-next {
+    right: -20px;
+  }
+
+  .slick-dots {
+    @include list-reset;
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0;
+
+    li {
+      margin-right: 13px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    button {
+      display: block;
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border-radius: 50%;
+      border: none;
+      background-color: $m-color;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .slick-active {
+      button {
+        background-color: #000;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    width: 768px;
+    margin: 0 auto 50px;
+  }
+
+  @media (max-width: 767px) {
+    width: 375px;
+  }
+
+  @media (max-width: 374px) {
+    width: 300px;
+  }
+}
+
+.coach__groups-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding-top: 50px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr 2fr;
+    row-gap: 25px;
+  }
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 2;
+  }
+}
+
+.coach__groups-picture {
+  width: 212px;
+  height: 212px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    margin: 0 auto 25px;
+  }
+}
+
+.coach__groups-text {
+}
+
+.coach__groups-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1023px) {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 25px;
+    justify-content: center;
+  }
+}
+
+.coach__contacts {
+  font-weight: 500;
+
+  ul,
+  ol {
+    @include list-reset;
+    font-weight: 400;
+  }
+
+  a {
+    color: $m-color;
+  }
+}

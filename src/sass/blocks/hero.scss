@@ -1,0 +1,78 @@
+.hero {
+  background: #f3f3f3 url("../img/hero-bg.jpg") no-repeat center top;
+  background-size: cover;
+  min-height: 480px;
+}
+
+.hero__wrapper {
+  @include wrapper;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+.hero__logos-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 45px;
+  margin-bottom: 40px;
+  padding-top: 45px;
+}
+
+.hero__logos-item {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.hero__article {
+  max-width: 740px;
+
+  h2 {
+    margin: 0;
+    font-size: 80px;
+    line-height: 92px;
+    font-family: $logo-font;
+
+    @media (max-width: 960px) {
+      font-size: 40px;
+      line-height: 52px;
+    }
+  }
+
+  h3,
+  &-subtitle {
+    margin: 0;
+    font-size: 50px;
+    line-height: 1;
+    font-family: $logo-font;
+
+    @media (max-width: 960px) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    max-width: 600px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  a {
+    color: $m-color;
+  }
+}
+
+.hero__logo {
+  margin-left: auto;
+
+  @media (max-width: 960px) {
+    width: 60px;
+    height: auto;
+  }
+}

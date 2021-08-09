@@ -1,0 +1,267 @@
+.main-slider {
+  @media (max-width: 1366px) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1200px) {
+    width: 1024px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 768px;
+  }
+
+  @media (max-width: 767px) {
+    width: 400px;
+  }
+
+  @media (max-width: 400px) {
+    width: 320px;
+  }
+}
+
+.main-slider__wrapper {
+  @include wrapper;
+  // padding-top: 60px;
+  background-image: url("../img/main-slider/mars-bg.jpg");
+  background-position: center center;
+  background-size: 576px;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1024px) {
+    background-size: contain;
+    background-position-y: center;
+  }
+
+  .slick-slide:nth-child(2n) {
+    .main-slider__slide-column {
+      .main-slider__slide-text {
+        order: -1;
+      }
+    }
+  }
+}
+
+.main-slider__pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+.main-slider__slide {
+  display: flex !important;
+  justify-content: center;
+  position: relative;
+  min-height: 630px;
+  margin-bottom: 40px;
+  h2 {
+    position: relative;
+    z-index: 2;
+    width: 365px;
+    align-self: flex-end;
+    padding-bottom: 76px;
+    margin: 0;
+    font-size: 80px;
+    line-height: 92px;
+    font-family: $logo-font;
+    animation: fadeOutLeft 1s both;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+
+    h2 {
+      width: 100%;
+      padding-bottom: 0;
+      font-size: 50px;
+      line-height: 1.2;
+    }
+
+    .main-slider__slide-text {
+      margin-left: 0;
+      max-width: unset;
+    }
+  }
+
+  @media (max-width: 400px) {
+    min-height: 470px;
+
+    h2 {
+      width: 100%;
+      padding-bottom: 0;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  }
+}
+
+.main-slider__slider {
+  .slick-current {
+    animation: Slick-FastSwipeIn 1s both;
+
+    h2 {
+      animation: fadeInDown 1s both 1s;
+    }
+
+    p {
+      animation: fadeInLeft 1s both 1.5s;
+    }
+  }
+}
+
+.main-slider__slide-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &--left {
+    justify-content: flex-end;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    &--left {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 767px) {
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    img {
+      width: 40px;
+    }
+  }
+}
+
+.main-slider__slide-text {
+  max-width: 432px;
+  margin-left: auto;
+  padding-bottom: 50px;
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 700;
+    text-align: justify;
+
+    @media (max-width: 400px) {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+.main-slider__slider-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 100px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &.slick-disabled {
+    opacity: 0.5;
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  @media (max-width: 767px) {
+    width: 50px;
+
+    &--prev {
+      left: -50px;
+    }
+
+    &--next {
+      right: -50px;
+    }
+  }
+}
+
+// @media (max-width: 980px) {
+//   .main-slider__wrapper {
+//     background-size: contain;
+//   }
+//   .main-slider__slide {
+//     h2 {
+//       width: 270px;
+//       font-size: 50px;
+//       line-height: 1.2;
+//     }
+//   }
+// }
+/* ==== Slider Image Transition === */
+@keyframes Slick-FastSwipeIn {
+  0% {
+    transform: rotate3d(0, 1, 0, 150deg) scale(0) perspective(400px);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg) scale(1) perspective(400px);
+  }
+}
+
+@-webkit-keyframes ProgressDots {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes ProgressDots {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}

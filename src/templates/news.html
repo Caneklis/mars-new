@@ -1,0 +1,79 @@
+---
+title: Новости
+---
+{% extends "../templates/layouts/_layout-inner.html" %}
+
+{% block content %}
+
+
+<section class="news-page">
+  <div class="news-page__wrapper">
+    <div class="news-page__header">
+      <h2 class="news__page-title">Новости и объявления</h2>
+
+      <form class="news-page__filter" action="#">
+        <ul class="news-page__filter-list">
+          <li class="news-page__filter-checkbox">
+            <input class="visually-hidden" id="competitions" type="checkbox" value=".competitions" />
+            <label class="news-page__filter-label" for="competitions">Соревнования</label>
+          </li>
+
+          <li class="news-page__filter-checkbox">
+            <input class="visually-hidden" id="approvals" type="checkbox" value=".approvals" />
+            <label class="news-page__filter-label" for="approvals">Аттестации</label>
+          </li>
+
+          <li class="news-page__filter-checkbox">
+            <input class="visually-hidden" id="festivals" type="checkbox" value=".festivals" />
+            <label class="news-page__filter-label" for="festivals">Фестивали</label>
+          </li>
+
+          <li class="news-page__filter-checkbox">
+            <input class="visually-hidden" id="сongratulations" type="checkbox" value=".сongratulations" />
+            <label class="news-page__filter-label" for="сongratulations">Поздравления</label>
+          </li>
+        </ul>
+      </form>
+
+
+    </div>
+    <ul class="news-page__news-list">
+      {% for i in range(0, 6) -%}
+      <li class="news-page__news-list-item mix  competitions">
+        <article class="news-page__news-article">
+          <div class="news-page__news-list-pic">
+            <img src="/img/news-page-thumb.jpg" width="432" height="310" alt="">
+          </div>
+          <div class="news-page__news-list-text">
+            <h3>Лиза — чемпион!</h3>
+            <div class="news-page__item-time">30 января 2021 г</div>
+            <p>В ГАУ "СШОР "МЦБИ" Москомспорта состоялся Чемпионат города Москвы среди мужчин и женщин (18 лет и старше)
+              и Первенство города Москвы среди мальчиков и девочек (10-11 лет), юношей и девушек (12-13 лет, 14-15 лет),
+              юниоров и юниорок (16-17 лет) по киокусинкай (кёкусин-ката, кёкусин-ката- группа). Тренер-преподаватель
+              Центра МАРС Фикс Элизабет стала чемпионкой Москвы 2021 г.!</p>
+          </div>
+        </article>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <section class="news-page__archive">
+    <div class="news-page__wrapper">
+      <h2 class="news__page-title">Архив новостей</h2>
+      <ul class="news-page__archive-list">
+        <li class="news-page__archive-list-item"><a href="#">2020</a></li>
+        <li class="news-page__archive-list-item"><a href="#">2019</a></li>
+        <li class="news-page__archive-list-item"><a href="#">2018</a></li>
+        <li class="news-page__archive-list-item"><a href="#">2017</a></li>
+        <li class="news-page__archive-list-item"><a href="#">2016</a></li>
+        <li class="news-page__archive-list-item"><a href="#">2015</a></li>
+        <li class="news-page__archive-list-item"><a href="#">2014</a></li>
+        <li class="news-page__archive-list-item"><a href="#">2013</a></li>
+        <li class="news-page__archive-list-item"><a href="#">2012</a></li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+
+{% endblock %}

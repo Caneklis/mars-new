@@ -1,0 +1,30 @@
+.contacts {
+  padding-top: 25px;
+  text-align: right;
+  font-family: $s-font;
+  font-size: 14px;
+  line-height: 26px;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 1439px) {
+  .contacts {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts__phone {
+    a {
+      pointer-events: none;
+    }
+  }
+}

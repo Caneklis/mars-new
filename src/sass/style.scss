@@ -1,0 +1,35 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/aos/dist/aos";
+@import "libs/animate.min";
+
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/scafoldings.scss";
+
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/hero.scss";
+@import "blocks/story.scss";
+@import "blocks/coaches.scss";
+@import "blocks/coach.scss";
+@import "blocks/structure.scss";
+@import "blocks/footer.scss";
+@import "blocks/social.scss";
+@import "blocks/contacts.scss";
+@import "blocks/main-slider.scss";
+@import "blocks/learn-more.scss";
+@import "blocks/timeline.scss";
+@import "blocks/news-page.scss";
+@import "blocks/document-list.scss";
+@import "blocks/modal.scss";
+@import "blocks/textpage.scss";
+@import "blocks/gallery-slider.scss";
+@import "blocks/gallery.scss";
+
+body {
+  background-color: #fff;
+}

@@ -1,0 +1,21 @@
+{% import "../data/menu.html" as items %}
+
+<nav class="main-nav">
+  <ul class="main-nav__list">
+    {% for item in items.menu %}
+    <li class="main-nav__item">
+      <a class="main-nav__link {% if page_title == item.menu_link %} main-nav__link--active{% endif %}"
+        href=" {{item.menu_link}}.html">{{ item.menu_item }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <button class="main-nav__toggle" type="button" aria-expanded="false" aria-controls="menu__list">
+    <svg class="main-nav__icon" aria-hidden="true" width="34" height="34">
+      <use class="main-nav__icon-menu" href="img/sprite.svg#icon-menu"></use>
+      <use class="main-nav__icon-cross" href="img/sprite.svg#icon-cross"></use>
+    </svg>
+  </button>
+  <ul class="main-nav__sublist">
+
+  </ul>
+</nav>

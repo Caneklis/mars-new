@@ -1,0 +1,27 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  min-height: 100%;
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: min-content 1fr min-content;
+  // align-content: start;
+  display: flex;
+  flex-direction: column;
+  font-family: $m-font;
+  font-weight: 500;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &--noovefflow {
+    overflow: hidden;
+  }
+}
+
+.page__content,
+.page__main {
+  flex-grow: 1;
+}

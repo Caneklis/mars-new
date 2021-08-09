@@ -1,0 +1,49 @@
+.social {
+  padding-top: 35px;
+}
+
+.social__list {
+  @include list-reset;
+  display: flex;
+}
+
+.social__item {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  a {
+    display: block;
+    transition: all 0.5s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .social__list {
+    justify-content: center;
+  }
+
+  .social__item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .social__item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,13 @@
+.learn-more {
+  display: inline-block;
+  text-transform: uppercase;
+  color: $m-color;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: $s-font;
+  transition: all 0.5s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

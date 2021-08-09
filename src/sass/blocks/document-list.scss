@@ -1,0 +1,21 @@
+.document-list {
+  @include list-reset;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(
+    to bottom,
+    rgba(191, 206, 219, 0.2) 0%,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  a {
+    color: $m-color;
+    font-size: 15px;
+    line-height: 40px;
+
+    &:hover {
+      color: darken($m-color, 10%);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.header__wrapper {
+  @include wrapper;
+  padding-top: 18px;
+  padding-bottom: 27px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &--main {
+    align-items: flex-start;
+
+    .main-nav {
+      padding-top: 20px;
+    }
+  }
+}
