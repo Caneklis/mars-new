@@ -70,7 +70,8 @@ $(".news-page__slider, .coach__photo-slider, .story__slider").slick({
   arrows: true,
   infinite: true,
   variableWidth: false,
-  lazyLoad: 'ondemand',
+  lazyLoad: "ondemand",
+  infinite: false,
 });
 
 $(".gallery-slider").slick({
@@ -79,11 +80,11 @@ $(".gallery-slider").slick({
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
-  centerPadding: '40px',
+  centerPadding: "40px",
   variableWidth: true,
   centerMode: true,
   arrows: true,
-  lazyLoad: 'ondemand',
+  lazyLoad: "ondemand",
   responsive: [
     {
       breakpoint: 1200,
@@ -92,7 +93,7 @@ $(".gallery-slider").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
-      }
+      },
     },
     {
       breakpoint: 759,
@@ -101,34 +102,27 @@ $(".gallery-slider").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
-        arrows: false
-      }
-    }
-  ]
+        arrows: false,
+      },
+    },
+  ],
 });
 
 const table = document.querySelectorAll(".textpage__article table");
 
 if (table) {
-  function wrap(top, selector, bottom){
+  function wrap(top, selector, bottom) {
     var matches = document.querySelectorAll(selector);
-    for (var i = 0; i < matches.length; i++){
+    for (var i = 0; i < matches.length; i++) {
       var modified = top + matches[i].outerHTML + bottom;
       matches[i].outerHTML = modified;
     }
   }
 
   wrap("<div class='table-responsive'>", ".textpage__article table", "</div>");
-
 }
 
 //$('.textpage__article table').wrap('<div class="table-responsive"></div>');
-
-
-
-
-
-
 
 // $(window).resize(function () {
 //   $(".news-page__slider").slick("resize");
