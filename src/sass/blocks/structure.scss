@@ -26,6 +26,7 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 40px;
 }
 
 .structure__item {
@@ -67,6 +68,10 @@
     font-size: 20px;
     line-height: 30px;
     text-transform: uppercase;
+
+    @media (max-width: 767px) {
+      min-height: unset;
+    }
   }
 
   p {
