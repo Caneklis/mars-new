@@ -33,7 +33,7 @@
     cursor: pointer;
 
     &::before {
-      content: url("../img/icons/structure-arrow.svg");
+      content: url('../img/icons/structure-arrow.svg');
       display: block;
     }
 
@@ -103,5 +103,6 @@
     display: block;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
   }
 }
